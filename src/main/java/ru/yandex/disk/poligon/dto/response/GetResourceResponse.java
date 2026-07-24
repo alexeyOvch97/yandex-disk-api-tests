@@ -1,0 +1,21 @@
+package ru.yandex.disk.poligon.dto.response;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class GetResourceResponse {
+
+    private String path;
+    private String type;
+    private String name;
+    private String created;
+    private String modified;
+
+    @JsonProperty("resource_id")
+    private String resourceId;
+}
