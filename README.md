@@ -16,43 +16,25 @@
 
 Base URL хранится в `src/main/resources/config.properties`:
 
-```
+```properties
 base.url=https://cloud-api.yandex.net
 ```
 
-Для авторизации необходимо передать OAuth токен через переменную окружения:
+Для авторизации необходимо передать OAuth токен при запуске тестов:
 
-```
-YANDEX_TOKEN=<your_token>
+```bash
+-DYANDEX_TOKEN=<your_token>
 ```
 
 ## Run tests
 
-Запуск всех тестов:
-
 ```bash
-mvn clean test
-```
-
-Запуск с переменной окружения:
-
-Windows PowerShell:
-
-```powershell
-$env:YANDEX_TOKEN="your_token"
-mvn clean test
-```
-
-Linux / macOS:
-
-```bash
-export YANDEX_TOKEN=your_token
-mvn clean test
+mvn clean test -DYANDEX_TOKEN=<your_token>
 ```
 
 ## Allure report
 
-После выполнения тестов сформировать отчет:
+После выполнения тестов открыть отчет:
 
 ```bash
 allure serve target/allure-results
