@@ -5,6 +5,7 @@ target/
 ### Allure ###
 allure-results/
 allure-report/
+.allure/
 
 ### Environment ###
 .env
@@ -12,8 +13,8 @@ allure-report/
 ### IntelliJ IDEA ###
 .idea/
 *.iml
-*.iws
 *.ipr
+*.iws
 
 ### Eclipse ###
 .classpath
